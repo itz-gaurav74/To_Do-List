@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To_Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h3>To Do List</h3>
+        <input type="text" >
+        <button>Add Data</button><hr>
+        <div class="list_data">
+            <ol>
+
+            </ol>
+        </div>
+    </div>
+
+
+
+    <script>
+        let text = document.querySelector('input');
+        let btn = document.querySelector('button');
+        let list = document.querySelector('ol');
+
+        btn.addEventListener('click',()=>{
+            let add = document.createElement('li');
+            add.innerText = text.value;
+            list.appendChild(add);
+        })
+
+    </script>
+</body>
+</html>
